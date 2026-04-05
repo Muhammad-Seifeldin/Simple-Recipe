@@ -23,7 +23,6 @@ export function RecipePagination({
 
 	const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-	const showEllipsisStart = currentPage > 3;
 	const showEllipsisEnd = currentPage < totalPages - 2;
 
 	const visiblePages = pages.filter((page) => {

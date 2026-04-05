@@ -4,7 +4,6 @@ import {
 	Clock,
 	ChefHat,
 	Star,
-	UtensilsCrossed,
 	Users,
 	Flame,
 	ArrowLeft,
