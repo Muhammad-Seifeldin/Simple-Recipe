@@ -1,0 +1,21 @@
+<svg width="320" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg">
+
+  <g transform="translate(50, 80)">
+
+    <ellipse cx="0" cy="10" rx="28" ry="10" fill="none" stroke="#111111" stroke-width="2"/>
+    <line x1="-28" y1="10" x2="-28" y2="28" stroke="#111111" stroke-width="2"/>
+    <line x1="28" y1="10" x2="28" y2="28" stroke="#111111" stroke-width="2"/>
+    <path d="M-28 28 Q0 42 28 28" fill="none" stroke="#111111" stroke-width="2"/>
+    <line x1="-10" y1="10" x2="-10" y2="28" stroke="#111111" stroke-width="1.2"/>
+    <line x1="10" y1="10" x2="10" y2="28" stroke="#111111" stroke-width="1.2"/>
+
+    <path d="M0 -38 C-4 -34 -14 -24 -14 -14 C-14 -4 -7 2 0 2 C7 2 14 -4 14 -14 C14 -24 4 -34 0 -38 Z" fill="#111111"/>
+    <path d="M0 -30 C-2 -26 -8 -20 -8 -14 C-8 -8 -4 -4 0 -4 C4 -4 8 -8 8 -14 C8 -20 2 -26 0 -30 Z" fill="white"/>
+    <path d="M-5 -22 C-5 -18 -3 -14 0 -12" fill="none" stroke="#111111" stroke-width="1" stroke-linecap="round"/>
+
+  </g>
+
+  <text x="95" y="72" font-family="Georgia, serif" font-size="28" font-weight="600" fill="#111111" letter-spacing="-0.5">Simple</text>
+  <text x="95" y="102" font-family="Georgia, serif" font-size="28" font-weight="400" fill="#111111" letter-spacing="-0.5">Recipe</text>
+
+</svg>

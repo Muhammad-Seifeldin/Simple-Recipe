@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Simple Recipe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, minimal recipe browsing platform built with React and TypeScript. Browse 50+ curated recipes from around the world, filter by cuisine, difficulty, meal type, and rating, and explore full recipe details — all without ads or distractions.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript**
+- **Vite** — build tool
+- **TanStack Router** — file-based routing with full type safety
+- **TanStack Query** — server state management and caching
+- **Zod** — schema validation
+- **React Hook Form** — form state management
+- **shadcn/ui** — component library
+- **Tailwind CSS v4** — styling
+- **Motion** — animations
+- **Biome** — linting and formatting
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Pinterest-style recipe grid with pagination
+- Filter by cuisine, difficulty, meal type, and rating
+- Tag-based filtering via slide-in drawer
+- Search by recipe name or tags
+- Full recipe detail page with ingredients and instructions
+- Submit your own recipe or request cooking lessons
+- Light and dark mode
+- Fully responsive
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+\`\`\`bash
+# Install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Start development server
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Build for production
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Preview production build
+npm run preview
+\`\`\`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+\`\`\`
+src/
+├── components/        # Reusable UI components
+│   ├── ui/            # shadcn generated components
+│   ├── layout/        # Navbar and Footer
+│   ├── home/          # Recipe grid, cards, filters, pagination
+│   ├── form/          # Form components and option selector
+│   └── shared/        # ThemeToggle
+├── routes/            # TanStack Router file-based routes
+├── hooks/             # TanStack Query hooks
+├── lib/               # API client, filters, utilities
+├── schemas/           # Zod schemas
+├── types/             # TypeScript types
+└── context/           # Theme context
+\`\`\`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## API
+
+Data is sourced from [DummyJSON Recipes API](https://dummyjson.com/docs/recipes). All 50 recipes are fetched on load and filtered client-side for instant results.
+
+## License
+
+MIT
