@@ -34,15 +34,10 @@ export function RecipeSubmissionForm({ onSuccess }: RecipeSubmissionFormProps) {
 	});
 
 	async function onSubmit(data: RecipeSubmissionFormData) {
-		await fetch("https://jsonplaceholder.typicode.com/posts", {
+		await fetch("https://httpbin.org/post", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({
-				...data,
-				prepTime: Number(data.prepTime),
-				cookTime: Number(data.cookTime),
-				servings: Number(data.servings),
-			}),
+			body: JSON.stringify(data),
 		});
 		onSuccess();
 	}

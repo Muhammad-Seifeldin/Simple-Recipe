@@ -34,7 +34,7 @@ export function CookingLessonsForm({ onSuccess }: CookingLessonsFormProps) {
 	});
 
 	async function onSubmit(data: CookingLessonsFormData) {
-		await fetch("https://jsonplaceholder.typicode.com/posts", {
+		await fetch("https://httpbin.org/post", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data),
